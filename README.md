@@ -57,15 +57,20 @@ Your team will be provided with the following necessary hardware
 
 The Arduino is a single-board microcontroller, essentially a tiny computing platform for creating interactive projects. The Arduino language is based on C/C++ and is very easy to learn. Libraries are available for all types of displays you will use, and I/O in general is easy to program. Arduino uses its own IDE, and you are expected to use it. You can download it at [the Arduino website](http://arduino.cc/en/Main/Software).
 
+More information to come here!
+<!-- FIXME -->
+
 ### The Inputs
 
-FIXME
+More information to come here!
+<!-- FIXME -->
 
 ### The Output
 
-FIXME
+* Information on the LED board including [how to wire it](https://learn.adafruit.com/32x16-32x32-rgb-led-matrix/overview)
 
-* Information on the LED board including [how to wire it](http://learn.adafruit.com/32x16-32x32-rgb-led-matrix/wiring-the-16x32-matrix)
+More information to come here!
+<!-- FIXME -->
 
 ## Software Overview
 
@@ -158,7 +163,8 @@ The invaders should move down by one LED every 50 iterations of your "Loop()" fu
 
 **WARNING: DO NOT power your Arduino or LED Matrix unless you are sure everything is wired properly**. Improperly wired projects may cause damage to your board or components. **_If you break a component, you will be responsible for replacing it!_**
 
-FIXME
+More information to come here!
+<!-- FIXME -->
 
 **NOTE**: At the end of the showcase, you **MUST** return all components that you have checked out from the class. **_If any component is broken, or if it is not returned at the end of the showcase, you must pay to replace that component._**
 
@@ -258,7 +264,7 @@ The team that you submit your proposal with constitutes your team for the Final 
 
 Your proposal **must** also answer the following questions:
 
-* Because we are dealing with low-level hardware, some global variables are unavoidable. There are three global variables in the distribution code; what are they called, and what types are they?
+* Because we are dealing with low-level hardware, some global variables are unavoidable. There are two global variables in the distribution code; what are they called, and what types are they?
 * In the [Distribution Code Overview](#distribution-code-overview), we mention that `matrix` has member functions. How would you call the `fillScreen()` function of `matrix`?
 * The LED screen starts with (0, 0) at the top left corner, and has 16 rows and 32 columns. What is the (x, y) of the bottom right corner? How would you turn that pixel `RED`?
 * There are at most 16 `Invaders` on screen. What is a good way of storing these Invaders?
