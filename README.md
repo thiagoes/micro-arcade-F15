@@ -186,28 +186,32 @@ More information to come here!
 
     ![Selecting the Arduino Uno board](readme_files/select-board.png)
 
-5. From the menubar, click Sketch > Import Library > Add Library:
+5. Make sure that from the menubar, Tools > Port > Arduino Uno is selcted.
+
+    ![Selecting the Arduino Uno board](readme_files/select-port.png)
+
+6. From the menubar, click Sketch > Import Library > Add Library:
 
     ![Adding a library to the Arduino IDE](readme_files/add-library.png)
 
-6. In the dialog, select the Adafruit GFX library (the adafruit-gfx directory in your Git directory).
+7. In the dialog, select the Adafruit GFX library (the adafruit-gfx directory in your Git directory).
 
     ![Adding the Adafruit GFX library](readme_files/adafruit-library.png)
 
-7. Repeat steps 4 and 5 with the RGB Matrix Panel library (the rgb-master-panel directory in your Git directory)
+8. Repeat steps 4 and 5 with the RGB Matrix Panel library (the rgb-master-panel directory in your Git directory)
 
     ![Adding the RGB Matrix Panel library](readme_files/matrix-panel-library.png)
 
-8. Open the distribution code from the menu, or alternately, from the Open button (the up-arrow) near the top of the IDE.
+9. Open the distribution code from the menu, or alternately, from the Open button (the up-arrow) near the top of the IDE.
 
     ![Opening the distribution code](readme_files/open-code.png)
     ![Selecting the distribution code](readme_files/choose-code.png)
 
-9. Click the Verify button (the checkmark) near the top of the Arduino IDE. This compiles your code and checks for errors. If you get an "Error Compiling" message, make sure you have added the libraries correct (steps 4-6). A successful compilation looks like this:
+10. Click the Verify button (the checkmark) near the top of the Arduino IDE. This compiles your code and checks for errors. If you get an "Error Compiling" message, make sure you have added the libraries correct (steps 4-6). A successful compilation looks like this:
 
     ![The code compiles!](readme_files/compile-success.png)
 
-10. Congratulations! You are now ready to start programming your Arduino! Start by playing with the Arduino by looking at the examples under the `rgb-matrix-panel` directory. When you get a feel for how the functions work, it's time to start thinking about how you would write your Space Invader clone.
+11. Congratulations! You are now ready to start programming your Arduino! Start by playing with the Arduino by looking at the examples under the `rgb-matrix-panel` directory. When you get a feel for how the functions work, it's time to start thinking about how you would write your Space Invader clone.
 
 ## Distribution Code
 
