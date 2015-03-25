@@ -42,7 +42,7 @@ The core part of this project is for you to implement a clone of Space Invaders,
 
 ## Hardware Overview
 
-**NOTE**: At the end of the showcase, you **MUST** return all components that you have checked out from the class. **_If any component is broken, or if it is not returned at the end of the showcase, you must pay to replace that component._**
+**NOTE**: At the end of the showcase, you **MUST** return all components that you have checked out from the class. **_If any component is broken, or if it is not returned at the end of the showcase, you must pay to replace that component._** You will not receive your grades for the semester until you have paid.
 
 Your team will be provided with the following necessary hardware
 
@@ -76,7 +76,7 @@ The way you will connect the Arduino to its inputs and outputs with through a *b
 
 ![A half-sized solder-less breadboard](readme_files/breadboard.jpg)
 
-Breadboards let you create circuits by providing an easy way to wire things together. Inside the breadboard, there's a piece of metal that connects every numbered row, so all wires plugged into that row would share the same voltage/signal. Additionally, the column of holes on the side also share a connection. The colored lines indicate that these holes are usually used for power and ground (red for power, blue for ground) - any electronic circuit needs to have some connection between power and ground to work. In the picture above, all the holes inside a purple rectangle share a connection. For this project, we will mostly be using the power and ground holes on the breadboard.
+Breadboards let you create circuits by providing an easy way to wire things together. Inside the breadboard, there's a piece of metal that connects every numbered row, so all wires plugged into that row would share the same voltage/signal. Additionally, the column of holes on the side also share a connection. The colored lines indicate that these holes are usually used for power and ground (red for power, blue for ground) - any electronic circuit needs to have some connection between power and ground to work. For example, in the picture above, all the holes inside a purple rectangle share a connection. For this project, we will mostly be using the power and ground holes on the breadboard.
 
 ### The Inputs
 
@@ -180,11 +180,20 @@ Finally, the cannonball fired by the player takes two LEDs, vertically on top of
 
 ### Game Dynamics
 
-The player is controlled by the potentiometer, and when the button is pressed, a cannonball should shoot out from the top middle LED. The cannon should be able to shoot from any column of the board; this means that the base of your cannon should be able to move one pixel off the edge of the screen, with the barrel appearing on the edge. When you shoot, the shot should be visible until you reach a creature or until it moves off of the top of the board. Both the cannonball and the invader should disappear on the iteration in which the ball would move on top of the invader.
+The player is controlled by the potentiometer, and when the button is pressed, a cannonball should shoot out from the top middle LED. The cannon should be able to shoot from any column of the board; this means that the base of your cannon should be able to move one pixel off the edge of the screen, with the barrel appearing on the edge. When you shoot, the shot should be visible until you reach a creature or until it moves off of the top of the board. Both the cannonball and the invader should disappear if the ball would move on top of the invader. Finally the bottom row of invaders should move down by one LED every few seconds. If an invader overlaps with the player, then the player loses a life. The game continues until the player has lost all three lives, or until the player has finished all the levels.
 
-The invaders should move down by one LED every 50 iterations of your "Loop()" function until they reach the bottom of the board or disappear. In one iteration of "Loop()", you should first get the new position of the paddle based on potentiometer values. Then, every 50th iteration, move the bottom most row of invaders down one pixel. After the invaders have been updated, either check to see if you need to update the ball, or, if there is not a ball on the board, check to see if the player is pressing a button to shoot a new ball.
+Given this description, the key part of your code will need to do the following:
+
+    * Update the position of the player based on the value of the potentiometer
+    * Update the position of the cannonball, including detecting if a new cannonball is being fired
+    * Update the position of each invader
+    * Detect if the cannonball is colliding with any of the invaders; if so, both the cannonball and the invader disappear
+    * Detect if the player is colliding with any of the invaders; if so, the player loses a life and the level restarts
+    * Detect if all the invaders are killed; if so, start the next level
 
 # Getting Started
+
+Here is a short guide to help you start this project. This guide walks you through wiring the potentiometer, the button, and the LED screen, as well as getting your computer set up to start programming the Arduino.
 
 ## Hardware
 
@@ -256,7 +265,7 @@ More information to come soon!
 
 ## Software
 
-**WARNING: DO NOT start coding until you have wired your matrix properly and can test, while you code.**
+**WARNING: DO NOT start coding until you have wired your matrix properly and can test while you code.**
 
 1. Download the distribution code from Github, but issuing this command on the terminal
 
@@ -301,9 +310,24 @@ More information to come soon!
 
 ## Distribution Code
 
-All the code that you write for this project will be in the single distribution file. This includes not only the code for drawing the invaders and the player cannon, but also the code that determines whether the player has won or lost.
+<!--
+Not sure if we actually want a single distribution file
+-->
 
-The Arduino, Adafruit GFX, and RGB Matrix Panel libraries provide several functions you may use. Some functions you may find useful include:
+All the code that you write for this project will be in the single distribution file. This includes not only the code for drawing the invaders and the player cannon, but also the code that determines whether the player has won or lost. The Arduino framework relies on two functions:
+
+* setup() - This function is called at the very beginning when the Arduino starts. Any initialization code - including setting the Arduino to properly read from the potentiometer and the button, and to properly output to the LED screen - should be done in this function.
+* loop() - This function is called repeatedly as the Arduino runs. This is where you will implement most of the game logic.
+
+For convenience, we have outlined several classes for you. *You are not required to use these classes*, but they may help you get started.
+
+* The `Color` class (not to be confused with `COLOR` above) is a wrapper around  `Color333()`, so you don't have to deal with RGB values directly. Several `const Color`s have already been defined for you, although of course you are welcome to define more colors. To use in the `matrix` functions, use `Color::to_333()`, eg. `matrix.drawPixel(1, 1, GREEN.to_333());`.
+* The `Invader` class represents an invader.
+* The `Cannonball` class represents the cannonball.
+* The `Player` class represents the player cannon.
+* The `Game` class pulls everything together, and handles the logic of winning and losing, as well as the drawing of each game element.
+
+The Arduino, Adafruit GFX, and RGB Matrix Panel libraries also provide several functions you may use. Some functions you may find useful include:
 
 * `delay(int t)` stops the execution of your program for `t` milliseconds.
 * `millis()` returns the number of milliseconds since your program started.
@@ -326,14 +350,6 @@ In addition to Arduino functions, the Adafruit screen also has functions you can
 
 For everywhere that we used `COLOR` above, we refer to the output of the function `Color333()`. You can learn more about the Adafruit libraries by looking at the `.h` files included with the distribution code.
 
-For convenience, we have outlined several classes for you. *You are not required to use these classes*, but they may help you get started.
-
-* The `Color` class (not to be confused with `COLOR` above) is a wrapper around  `Color333()`, so you don't have to deal with RGB values directly. Several `const Color`s have already been defined for you, although of course you are welcome to define more colors. To use in the `matrix` functions, use `Color::to_333()`, eg. `matrix.drawPixel(1, 1, GREEN.to_333());`.
-* The `Invader` class represents an invader.
-* The `Cannonball` class represents the cannonball.
-* The `Player` class represents the player cannon.
-* The `Game` class pulls everything together, and handles the logic of winning and losing, as well as the drawing of each game element.
-
 Finally, you can use the `Serial.print(string text)`  and `Serial.println(string test)` functions for debugging. This prints `text` to the Arduino IDE, much like ``cout`` prints to the console in Xcode or Visual Studios. `Serial.print()` does not insert an `endl`, while `Serial.println()` does. Be careful! If you use either function too many times in your code, your code could slow to a crawl.
 
 # Reach
@@ -343,10 +359,11 @@ From the basic use of the Arduino microcontroller, there are many extensions for
 * Adding sound to your games and an LCD display for a scoreboard would be nice and is something you should look into, but this would not be a complete extension considering how simple it is. You would have to couple it with a few more ideas. 
 * Program an additional game (ex. snake, pong, block breaker). This is our favorite reach possibility!
 * Change the rules of the current game so that it has a more difficult implementation. Here are examples of some things you can add:
-* The player could have points that he accumulates based on how fast he finishes each level. Point value can be displayed right before the game ends.
+    * The player could have points that he accumulates based on how fast he finishes each level. Point value can be displayed right before the game ends.
     * As a round progresses, the speed of the invaders could increase with each kill.
     * You could add another cannon to the board.
     * You could make the cannon size grow or shrink as the player plays the game and have extra shots.
+* Write an AI that could reliable beat the game
 
 # Proposal
 
