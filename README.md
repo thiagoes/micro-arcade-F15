@@ -190,8 +190,69 @@ The invaders should move down by one LED every 50 iterations of your "Loop()" fu
 
 **WARNING: DO NOT power your Arduino or LED Matrix unless you are sure everything is wired properly**. Improperly wired projects may cause damage to your board or components. **_If you break a component, you will be responsible for replacing it!_**
 
+There are two parts to setting up your hardware: wiring the button and the potentiometer to the Arduino as inputs and wiring the LED screen to the Arduino as an input.
+
+### The Inputs: Potentiometer and Button
+
 More information to come soon!
 <!-- FIXME -->
+
+### The Outputs: The LED Screen
+
+1. Make sure that neither the Arduino nor the LED screen is connected to a power source - that is, neither to a USB cable, nor to a power converter.
+
+2. Each pin on the Arduino is labeled - the digital pins go from pin 0 up to pin 13, the analog pins go from A0 to A5, as well as power pins marked GND (for ground) and 5V (5 volts). We will refer to these as pin 0, pin 1, ... pin 13, pin A0, pin A1, ... pin A5, and simply ground and power for GND and 5V.
+
+3. The pins on the input connector of the LED screen are also labeled. The border of the board may obscure some of the labels, so we've recreated the diagram here:
+
+    ![The pins on the input connector of the LED screen](readme_files/screen-input-pins.png)
+
+    Here is (roughly) what the different pins do:
+    * The symbol that [looks like a downward arrow](http://en.wikipedia.org/wiki/Ground_%28electricity%29#Electronics) stands for ground.
+    * The R1, G1, B1, R2, G2, B2 pins tell the screen what red, green, and blue values to display on the upper and lower half of the board respectively.
+    * The CLK (clock) pin tells the screen that new data has come in.
+    * The A, B, and C pins tell the screen which row is currently being described.
+    * The LAT (latch) pin tells the screen that it's the end of the current set of data.
+    * The OE (output enable) pin tells the screen to move to the next row of LEDs.
+
+3. On your ribbon cable, take a look at the connectors - one side of each connector has a bump, which fits into the corresponding gap in the Arduino input connector. If you lay the cable flat, then the pins on the two ends of the cable correspond like this:
+
+    ![How the ribbon cable is wired when it's lying flat](readme_files/flat-cable-connections.png)
+
+4. Plug one end of your ribbon cable into the input connector in your LED screen, then flip the screen back over and lay everything flat again. Because the LED screen is now flipped from when you were reading the pin labels, the pins are also flipped. That is, for the unplugged end of the cable, the corresponding labels would be:
+
+    ![The labels from the LED screen are flipped on the other end of the ribbon cable](readme_files/flipped-cable-pins.png)
+
+5. Just one more thing before we begin wiring. By convention, different colored wires are used for different things, so that it's easier to separate them. The most common convention is to use red wires for power, and black wires for ground. In this project, we will also be using wires that represent the red, green, and blue values of LEDs. If you don't have wires of these colors, don't worry - you can still do the project, you'll just have to keep track of the different wires more carefully.
+
+5. Now we're reading to start wiring. First, four of the input connector pins should be grounded (eg. connected to ground). Since we only have three ground pins on the Arduino, we will need to use the breadboard. Take a wire - preferably black - and gently insert it into one of the ground pins on the Arduino. Take the other end and insert it into a hole on the breadboard next to one of the blue lines.
+
+7. All the GND pins on the cable should be wired to other holes next to the same blue line. This connects those pins to the breadboard, which connects to ground on the Arduino.
+
+8. The remaining wires go directly between the Arduino and the cable. The wirings, Arduino -> cable, are listed below. Make sure you do each one correctly; once everything is wired, it becomes much more difficult to check that a wire is connecting the right pins.
+
+    * 2 -> R1
+    * 3 -> G1
+    * 4 -> B1
+    * 5 -> R2
+    * 6 -> G2
+    * 7 -> B2
+    * 8 -> CLK
+    * 9 -> OE
+    * A0 -> A
+    * A1 -> B
+    * A2 -> C
+    * A3 -> LAT
+
+9. Double check that everything is wired correctly. There should be one (1) wire between the Arduino and the breadboard, four (4) wires between the breadboard and the LED screen, and twelve (12) wires between the Arduino and the LED screen.
+
+9. Connect the Arduino to your computer with the USB cable.
+
+10. Connect the LED screen to the power converter, and plug the power converter into a wall socket.
+
+11. Wait for one minute, keeping an eye on the Arduino. The LEDs may remain off, or they may flicker depending on what is currently stored in the Arduino. Gently touch the chip on the Arduino (the large black rectangle in the middle), and make sure that it is not getting hot. **If the Arduino gets hot, immediately unplug both the Arduino from your computer and the power converter from the wall socket.** You probably wired your screen incorrect if this happens, and will need to check all your wires.
+
+12. If after a minute everything still looks fine - no smoke, the Arduino is at room temperature - then your Arduino is ready to be programed!
 
 ## Software
 
@@ -325,3 +386,4 @@ If the Arduino IDE refuses to run on a Mac, even after you have installed a newe
 
 * The [Adafruit GFX library](https://github.com/adafruit/Adafruit-GFX-Library/commit/a9e5bc470736ffe9c9ef11d778bc4dcd47169d42)
 * The [Adafruit RGB Matrix Panel library](https://github.com/adafruit/RGB-matrix-Panel/commit/8570b7a431ff0ac52ff16b8448926cd0913dd609)
+* The [instructions for wiring the RGB Matrix](https://learn.adafruit.com/32x16-32x32-rgb-led-matrix/overview)
