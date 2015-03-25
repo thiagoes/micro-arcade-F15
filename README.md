@@ -17,7 +17,8 @@ Here's a picture of what your final product might look like:
 
 * [Core](#core)
     * [Hardware Overview](#hardware-overview)
-        * [Arduino](#arduino)
+        * [The Arduino](#the-arduino)
+        * [The Breadboard](#the-breadboard)
         * [The Inputs](#the-inputs)
         * [The Output](#the-output)
     * [Software Overview](#software-overview)
