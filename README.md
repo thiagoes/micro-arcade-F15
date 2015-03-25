@@ -53,7 +53,7 @@ Your team will be provided with the following necessary hardware
 * resistors
 * 5V power supply
 
-### Arduino
+### The Arduino
 
 ![The Arduino Uno, the microcontroller board you will be using for this project](readme_files/arduino-uno.jpg)
 
@@ -67,7 +67,7 @@ If you orient your Arduino to match the picture above, you can see the main comp
 4. Along the lower edge are a series of *pins*, which connect the Arduino to inputs and outputs. If you look closely, you will see that some pins provide power, while others get *analog* input (like the potentiometer) and output (like telling the LED screen which rows to light up)
 5. Along the upper edge, there's another series of pins. These handle *digital* input (like the button) and output (like the color of the LEDs).
 
-### The Bread
+### The Breadboard
 
 The way you will connect the Arduino to its inputs and outputs with through a *breadboard*. They look like this:
 
@@ -77,7 +77,7 @@ Breadboards let you create circuits by providing an easy way to wire things toge
 
 ### The Inputs
 
-More information to come here!
+More information to come soon!
 <!-- FIXME -->
 
 ### The Output
@@ -187,7 +187,7 @@ The invaders should move down by one LED every 50 iterations of your "Loop()" fu
 
 **WARNING: DO NOT power your Arduino or LED Matrix unless you are sure everything is wired properly**. Improperly wired projects may cause damage to your board or components. **_If you break a component, you will be responsible for replacing it!_**
 
-More information to come here!
+More information to come soon!
 <!-- FIXME -->
 
 ## Software
