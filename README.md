@@ -272,12 +272,17 @@ Submit your proposals in PDF format by **Fri 3/27** to [the autograder](https://
 
 The team that you submit your proposal with constitutes your team for the Final Project. There will be no revisions to these teams except in situations which merit staff intervention. You may not change your team once this document has been submitted.
 
-Your proposal **must** also answer the following questions:
+Your proposal **must** also answer the following questions about your team:
 
-* Because we are dealing with low-level hardware, some global variables are unavoidable. There are two global variables in the distribution code; what are they called, and what types are they?
+* How will your team split up the work?
+* How regularly will your team meet to work on this project, if at all?
+* What are two possible ideas for the reach that you are considering?
+
+As well as these warm-up questions about the project:
+
 * In the [Distribution Code Overview](#distribution-code-overview), we mention that `matrix` has member functions. How would you call the `fillScreen()` function of `matrix`?
-* The LED screen starts with (0, 0) at the top left corner, and has 16 rows and 32 columns. What is the (x, y) of the bottom right corner? How would you turn that pixel `RED`?
-* There are at most 16 `Invaders` on screen. What is a good way of storing these Invaders?
+* The LED screen starts with (0, 0) at the top left corner, and has 16 rows and 32 columns. What is the (x, y) of the bottom right corner? How would you [turn that pixel `RED`](#distribution-code)?
+* There are at most 16 `Invaders` on screen. What is a good way of storing these Invaders? What programming concept could you use to draw all of them?
 
 ## Step 2 of 2
 
