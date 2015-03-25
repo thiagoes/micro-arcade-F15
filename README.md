@@ -47,12 +47,14 @@ The core part of this project is for you to implement a clone of Space Invaders,
 Your team will be provided with the following necessary hardware
 
 * Arduino Uno
-* 16x32 RGB LED matrix by Adafruit
+* Adafruit 16x32 RGB Matrix Panel
 * 1 potentiometer
 * 1 button
+* 1 flat ribbon cable
+* 1 USB cable
+* 5V power converter
 * wires
 * resistors
-* 5V power supply
 
 ### The Arduino
 
