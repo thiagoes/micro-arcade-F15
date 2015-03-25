@@ -55,12 +55,25 @@ Your team will be provided with the following necessary hardware
 
 ### Arduino
 
-![The Arduino Uno, the microcontroller board you will be using for this project](readme_files/arduino_uno.jpg)
+![The Arduino Uno, the microcontroller board you will be using for this project](readme_files/arduino-uno.jpg)
 
 The Arduino is a single-board microcontroller, essentially a tiny computing platform for creating interactive projects. The Arduino language is based on C/C++ and is very easy to learn. Libraries are available for all types of displays you will use, and I/O in general is easy to program. Arduino uses its own IDE, and you are expected to use it. You can download it at [the Arduino website](http://arduino.cc/en/Main/Software).
 
-More information to come here!
-<!-- FIXME -->
+If you orient your Arduino to match the picture above, you can see the main components of the Arduino you will be using. Going counter-clockwise from the top left:
+
+1. On the top left corner, there's a button that restarts the Arduino.
+2. Just below that button is a USB port, that allows you to upload code to the Arduino.
+3. On the bottom left corner, there's 5V power connector. You won't need to use this, as we will be powering the Arduino by USB.
+4. Along the lower edge are a series of *pins*, which connect the Arduino to inputs and outputs. If you look closely, you will see that some pins provide power, while others get *analog* input (like the potentiometer) and output (like telling the LED screen which rows to light up)
+5. Along the upper edge, there's another series of pins. These handle *digital* input (like the button) and output (like the color of the LEDs).
+
+### The Bread
+
+The way you will connect the Arduino to its inputs and outputs with through a *breadboard*. They look like this:
+
+![A half-sized solder-less breadboard](readme_files/breadboard.jpg)
+
+Breadboards let you create circuits by providing an easy way to wire things together. Inside the breadboard, there's a piece of metal that connects every numbered row, so all wires plugged into that row would share the same voltage/signal. Additionally, the column of holes on the side also share a connection. The colored lines indicate that these holes are usually used for power and ground (red for power, blue for ground). In the picture above, all the holes inside a purple rectangle share a connection. For this project, we will mostly be using the power and ground holes on the breadboard.
 
 ### The Inputs
 
@@ -69,10 +82,19 @@ More information to come here!
 
 ### The Output
 
-* Information on the LED board including [how to wire it](https://learn.adafruit.com/32x16-32x32-rgb-led-matrix/overview)
+We are using the Adafruit 32x16 LED screen. The front of it looks like this (when it's lit up):
 
-More information to come here!
-<!-- FIXME -->
+![The front of the Adafruit 32x16 matrix](readme_files/adafruit-matrix-front.jpg)
+
+Each of those little white dots is an LED (Light Emitting Diode). We can separately set the amount of red, green, and blue light that comes out of it; when they're all on, the LED will be white, while if they're all off the entire LED will be off.
+
+On the back, there are three main connectors. Make sure the board says "IN" or "INPUT" and "OUT" or "OUTPUT" near the correct connectors:
+
+![The back of the Adafruit 32x16 matrix](readme_files/adafruit-matrix-back.jpg)
+
+* On the left is the input connector. We will be connecting this to the Arduino via the breadboard, some wires, and a flat ribbon cable.
+* In the middle is the power connector. We will be connecting this to the power converter.
+* On the right is the output connector. We will not be using this connector in this project.
 
 ## Software Overview
 
