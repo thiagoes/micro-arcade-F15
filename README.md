@@ -1,10 +1,6 @@
 # Arduino Micro Arcade
 
-This project involves using the Arduino micro-controller link two sensors to an LED screen, so that you can play [Space Invaders](http://en.wikipedia.org/wiki/Space_Invaders). Here's a picture of what your final product might look like:
-
-![Space Invaders!](readme_files/banner.png)
-
-The goal of this project is for you to:
+This project involves using the Arduino micro-controller link two sensors to an LED screen, so that you can play [Space Invaders](http://en.wikipedia.org/wiki/Space_Invaders). The goal of this project is for you to:
 
 * Gain experience working with hardware, including circuits and a little bit of soldering (yes, there will be soldering!)
 * Understand the basics of how software can control hardware, both input (a potentiometer and a button) and output (an LED screen)
@@ -12,6 +8,10 @@ The goal of this project is for you to:
 * Use these concepts in a comprehensive project
 * Start moving beyond simply writing code to designing programs
 * Have fun!
+
+Here's a picture of what your final product might look like:
+
+![Space Invaders!](readme_files/banner.png)
 
 ## Table of Contents
 
@@ -40,6 +40,8 @@ The goal of this project is for you to:
 The core part of this project is for you to implement a clone of Space Invaders, an early arcade game and a key part of video game history. We chose this game so that it is approachable for beginning programmers and game developers while fitting the micro Arcade platform well.
 
 ## Hardware Overview
+
+**NOTE**: At the end of the showcase, you **MUST** return all components that you have checked out from the class. **_If any component is broken, or if it is not returned at the end of the showcase, you must pay to replace that component._**
 
 Your team will be provided with the following necessary hardware
 
@@ -165,8 +167,6 @@ The invaders should move down by one LED every 50 iterations of your "Loop()" fu
 
 More information to come here!
 <!-- FIXME -->
-
-**NOTE**: At the end of the showcase, you **MUST** return all components that you have checked out from the class. **_If any component is broken, or if it is not returned at the end of the showcase, you must pay to replace that component._**
 
 ## Software
 
