@@ -366,7 +366,8 @@ Your proposal **must** also answer the following questions about your team:
 
 As well as these warm-up questions about the project:
 
-* In the [Distribution Code Overview](#distribution-code-overview), we mention that `matrix` has member functions. How would you call the `fillScreen()` function of `matrix`?
+* By convention, different colored wires often have different meanings. What do red wires and black wires usually stand for?
+* In the [overview for the distribution code](#distribution-code), we mention that `matrix` has member functions. How would you call the `fillScreen()` function of `matrix`?
 * The LED screen starts with (0, 0) at the top left corner, and has 16 rows and 32 columns. What is the (x, y) of the bottom right corner? How would you [turn that pixel `RED`](#distribution-code)?
 * There are at most 16 `Invaders` on screen. What is a good way of storing these Invaders? What programming concept could you use to draw all of them?
 
