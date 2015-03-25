@@ -264,7 +264,9 @@ From the basic use of the Arduino microcontroller, there are many extensions for
 
 # Proposal
 
-Submit your proposals in PDF format to [the autograder](https://umich.edu/~eecs183/autograder) under the appropriate Proposal submission section. Please include the names of all your team members in your Proposal document. Your submission should be titled 
+## Step 1 of 2
+
+Submit your proposals in PDF format by **Fri 3/27** to [the autograder](https://umich.edu/~eecs183/autograder) under the appropriate Proposal submission section. Please include the names of all your team members in your Proposal document. Your submission should be titled 
 
         arduino_uniqname1_uniqname2_uniqname3_uniqname4.pdf
 
@@ -276,6 +278,10 @@ Your proposal **must** also answer the following questions:
 * In the [Distribution Code Overview](#distribution-code-overview), we mention that `matrix` has member functions. How would you call the `fillScreen()` function of `matrix`?
 * The LED screen starts with (0, 0) at the top left corner, and has 16 rows and 32 columns. What is the (x, y) of the bottom right corner? How would you turn that pixel `RED`?
 * There are at most 16 `Invaders` on screen. What is a good way of storing these Invaders?
+
+## Step 2 of 2
+
+Head to https://umich.edu/~eecs183/forms/final_project where a form awaits. Fill it out by **Fri 3/27**. Once **each member of your team** has submitted that form (and your team has submitted the PDF in Step 1), you are done with the Proposal! We advise you submit these while meeting with your teammates, if possible, to minimize the chances of misspelling any uniqnames or your team name.
 
 # Submission
 
