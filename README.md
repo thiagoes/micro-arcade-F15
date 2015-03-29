@@ -238,7 +238,7 @@ More information to come soon!
 
 7. All the GND pins on the cable should be wired to other holes next to the same blue line. This connects those pins to the breadboard, which connects to ground on the Arduino.
 
-8. The remaining wires go directly between the Arduino and the cable. The wirings, Arduino -> cable, are listed below. Make sure you do each one correctly; once everything is wired, it becomes much more difficult to check that a wire is connecting the right pins.
+8. The remaining wires go directly between the Arduino and the cable. The wirings, Arduino -> cable, are listed below. Make sure you do each one correctly; once everything is wired, it becomes much more difficult to check that a wire is connecting the right pins. The pin labels are included again for easy reference.
 
     * 2 -> R1
     * 3 -> G1
@@ -252,6 +252,8 @@ More information to come soon!
     * A1 -> B
     * A2 -> C
     * A3 -> LAT
+
+    ![The labels from the LED screen are flipped on the other end of the ribbon cable](readme_files/flipped-cable-pins.png)
 
 9. Double check that everything is wired correctly. There should be one (1) wire between the Arduino and the breadboard, four (4) wires between the breadboard and the LED screen, and twelve (12) wires between the Arduino and the LED screen.
 
@@ -285,7 +287,7 @@ More information to come soon!
 
     ![Selecting the Arduino Uno board](readme_files/select-port.png)
 
-6. From the menubar, click Sketch > Import Library > Add Library:
+6. From the menubar, click Sketch > Import Library > Add Library (it may also be Sketch -> Include Library -> Add .ZIP library):
 
     ![Adding a library to the Arduino IDE](readme_files/add-library.png)
 
