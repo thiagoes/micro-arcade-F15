@@ -20,6 +20,37 @@ const int NUM_ENEMIES = 16;
 // a global variable that represents the LED screen
 RGBmatrixPanel matrix(A, B, C, CLK, LAT, OE, false);
 
+class Color {
+  public:
+    int red;
+    int green;
+    int blue;
+    Color() {
+      red = 0;
+      green = 0;
+      blue = 0;
+    }
+    Color(int r, int g, int b) {
+      red = r;
+      green = g;
+      blue = b;
+    }
+    uint16_t to_333() const {
+      return matrix.Color333(red, green, blue);
+    }
+};
+
+const Color BLACK(0, 0, 0);
+const Color RED(7, 0, 0);
+const Color ORANGE(7, 4, 0);
+const Color YELLOW(7, 7, 0);
+const Color GREEN(0, 7, 0);
+const Color BLUE(0, 0, 7);
+const Color PURPLE(7, 0, 7);
+const Color WHITE(7, 0, 7);
+const Color LIME(4, 7, 0);
+const Color AQUA(0, 7, 7);
+
 class Invader {
   public:
     Invader() {
