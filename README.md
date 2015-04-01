@@ -80,8 +80,11 @@ Breadboards let you create circuits by providing an easy way to wire things toge
 
 ### The Inputs
 
-More information to come soon!
-<!-- FIXME -->
+There will be two inputs to your game: a potentiometer and a button. A button is really just a switch - when you press the button, it completes a circuit and changes the voltage, which is how the Arduino knows you pressed the button. For the curios, electrically, it looks like this:
+
+![How the button is electrically wired](readme_files/button-switch.jpg)
+
+<!-- FIXME what is a potentiometer? -->
 
 ### The Output
 
@@ -203,14 +206,13 @@ There are two parts to setting up your hardware: wiring the button and the poten
 
 ### The Inputs: Potentiometer and Button
 
-Button: 
-You want to position the button on your breadboard so that legs A and B are in the same column and legs C and D are in the same column. One leg should be wired to power. The other leg should be connected to the resistor and digital pin 10. The resistor should be connected to ground. The image shows the correct wiring for a button connected to digital pin 2.
+Attach the potentiometer onto a column on the breadboard so that all the legs are in the same column. Looking at the image below, the leftmost leg is connected to ground. For this project, you should connect the middle leg to analog pin 5 even though in the image it is connected to analog pin 3. The rightmost leg should be connected to power.
 
-Potentiometer:
-Stick the potentiometer into a column on the breadboard so that all the legs are in the same column. Looking at the image, the leftmost leg is connected to ground. For this project, you should connect the middle leg to analog pin 5 even though in the image it is connected to analog pin 3. The rightmost leg should be connected to power.
+![How to connect the potentiometer to the Arduino and to the breadboard](readme_files/potentiometer-breadboard.jpg)
 
-Images coming soon!
-<!-- FIXME -->
+For the button, you want to position it on your breadboard so that the legs on opposite sides of the button are in the same column. One leg should be wired to power; the other leg should be connected to the resistor and digital pin 10. The resistor should be connected to ground. This image shows the correct wiring for a button connected to digital pin 2 (instead of pin 10).
+
+![How to connect the button to the Arduino and to the breadboard](readme_files/button-breadboard.png)
 
 ### The Outputs: The LED Screen
 
