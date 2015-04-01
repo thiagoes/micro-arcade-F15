@@ -210,7 +210,7 @@ Attach the potentiometer onto a column on the breadboard so that all the legs ar
 
 ![How to connect the potentiometer to the Arduino and to the breadboard](readme_files/potentiometer-breadboard.jpg)
 
-For the button, you want to position it on your breadboard so that the legs on opposite sides of the button are in the same column. One leg should be wired to power; the other leg should be connected to the resistor and digital pin 10. The resistor should be connected to ground. This image shows the correct wiring for a button connected to digital pin 2 (instead of pin 10).
+For the button, you want to position it on your breadboard so that the legs on opposite sides of the button spans a ditch (as shown in the digram). One leg should be wired to power; the other leg should be connected to the resistor and digital pin 10. The resistor should be connected to ground. This image shows the correct wiring for a button connected to digital pin 2 (instead of pin 10).
 
 ![How to connect the button to the Arduino and to the breadboard](readme_files/button-breadboard.png)
 
