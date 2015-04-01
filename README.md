@@ -203,7 +203,13 @@ There are two parts to setting up your hardware: wiring the button and the poten
 
 ### The Inputs: Potentiometer and Button
 
-More information to come soon!
+Button: 
+You want to position the button on your breadboard so that legs A and B are in the same column and legs C and D are in the same column. One leg should be wired to power. The other leg should be connected to the resistor and digital pin 10. The resistor should be connected to ground. The image shows the correct wiring for a button connected to digital pin 2.
+
+Potentiometer:
+Stick the potentiometer into a column on the breadboard so that all the legs are in the same column. Looking at the image, the leftmost leg is connected to ground. For this project, you should connect the middle leg to analog pin 5 even though in the image it is connected to analog pin 3. The rightmost leg should be connected to power.
+
+Images coming soon!
 <!-- FIXME -->
 
 ### The Outputs: The LED Screen
