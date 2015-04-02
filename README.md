@@ -84,7 +84,7 @@ There will be two inputs to your game: a potentiometer and a button. A button is
 
 ![How the button is electrically wired](readme_files/button-switch.jpg)
 
-<!-- FIXME what is a potentiometer? -->
+A potentiometer is a much more complicated piece of hardware than a button. If you want to find out more, take a look at [the Wikipedia article](http://en.wikipedia.org/wiki/Potentiometer).
 
 ### The Output
 
@@ -263,7 +263,7 @@ For the button, you want to position it on your breadboard so that the legs on o
 
     ![The labels from the LED screen are flipped on the other end of the ribbon cable](readme_files/flipped-cable-pins.png)
 
-9. Double check that everything is wired correctly. There should be one (1) wire between the Arduino and the breadboard, four (4) wires between the breadboard and the LED screen, and twelve (12) wires between the Arduino and the LED screen.
+9. Double check that everything is wired correctly. There should be one (1) wire between the Arduino and the breadboard, four (4) wires between the breadboard and the LED screen, and twelve (12) wires between the Arduino and the LED screen. (You will have more if you've wired the potentiometer and/or the button.)
 
 9. Connect the Arduino to your computer with the USB cable.
 
@@ -331,7 +331,7 @@ All the code that you write for this project will be in the single distribution 
 
 For convenience, we have outlined several classes for you. *You are not required to use these classes*, but they may help you get started.
 
-* The `Color` class (not to be confused with `COLOR` above) is a wrapper around  `Color333()`, so you don't have to deal with RGB values directly. Several `const Color`s have already been defined for you, although of course you are welcome to define more colors. To use in the `matrix` functions, use `Color::to_333()`, eg. `matrix.drawPixel(1, 1, GREEN.to_333());`.
+* The `Color` class (not to be confused with `COLOR` below) is a wrapper around  `Color333()`, so you don't have to deal with RGB values directly. Several `const Color`s have already been defined for you, although of course you are welcome to define more colors. To use in the `matrix` functions, use `Color::to_333()`, eg. `matrix.drawPixel(1, 1, GREEN.to_333());`.
 * The `Invader` class represents an invader.
 * The `Cannonball` class represents the cannonball.
 * The `Player` class represents the player cannon.
@@ -373,7 +373,7 @@ From the basic use of the Arduino microcontroller, there are many extensions for
     * As a round progresses, the speed of the invaders could increase with each kill.
     * You could add another cannon to the board.
     * You could make the cannon size grow or shrink as the player plays the game and have extra shots.
-* Write an AI that could reliable beat the game
+* Write an AI that could reliably beat the game
 
 # Proposal
 
