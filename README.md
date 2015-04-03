@@ -80,7 +80,7 @@ Breadboards let you create circuits by providing an easy way to wire things toge
 
 ### The Inputs
 
-There will be two inputs to your game: a potentiometer and a button. A button is really just a switch - when you press the button, it completes a circuit and changes the voltage, which is how the Arduino knows you pressed the button. For the curios, electrically, it looks like this:
+There will be two inputs to your game: a potentiometer and a button. A button is really just a switch - when you press the button, it completes a circuit and changes the voltage, which is how the Arduino knows you pressed the button. For the curious, electrically, it looks like this:
 
 ![How the button is electrically wired](readme_files/button-switch.jpg)
 
@@ -92,7 +92,7 @@ We are using the Adafruit 32x16 LED screen. The front of it looks like this (whe
 
 ![The front of the Adafruit 32x16 matrix](readme_files/adafruit-matrix-front.jpg)
 
-Each of those little white dots is an LED (Light Emitting Diode). We can separately set the amount of red, green, and blue light that comes out of it; when they're all on, the LED will be white, while if they're all off the entire LED will be off.
+Each of those bright, little dots is an LED (Light Emitting Diode). We can separately set the amount of red, green, and blue light that comes out of each one. If they're all on, the LED will be white, and if they're all off the LED will be black.
 
 On the back, there are three main connectors. Make sure the board says "IN" or "INPUT" and "OUT" or "OUTPUT" near the correct connectors:
 
