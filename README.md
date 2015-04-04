@@ -320,10 +320,6 @@ For the button, you want to position it on your breadboard so that the legs on o
 
 ## Distribution Code
 
-<!--
-Not sure if we actually want a single distribution file
--->
-
 All the code that you write for this project will be in the single distribution file. This includes not only the code for drawing the invaders and the player cannon, but also the code that determines whether the player has won or lost. The Arduino framework relies on two functions:
 
 * setup() - This function is called at the very beginning when the Arduino starts. Any initialization code - including setting the Arduino to properly read from the potentiometer and the button, and to properly output to the LED screen - should be done in this function.
@@ -360,7 +356,11 @@ In addition to Arduino functions, the Adafruit screen also has functions you can
 
 For everywhere that we used `COLOR` above, we refer to the output of the function `Color333()`. You can learn more about the Adafruit libraries by looking at the `.h` files included with the distribution code.
 
-Finally, you can use the `Serial.print(string text)`  and `Serial.println(string test)` functions for debugging. This prints `text` to the Arduino IDE, much like ``cout`` prints to the console in Xcode or Visual Studios. `Serial.print()` does not insert an `endl`, while `Serial.println()` does. Be careful! If you use either function too many times in your code, your code could slow to a crawl.
+Finally, you can use the `Serial.print(string text)` and `Serial.println(string test)` functions for debugging. This prints `text` to the Arduino IDE, much like ``cout`` prints to the console in Xcode or Visual Studios. `Serial.print()` does not insert an `endl`, while `Serial.println()` does. You can open the Serial monitor by clicking the top right of the Arduino IDE:
+
+![How to open the Serial monitor](readme_files/serial-monitor.png)
+
+Be careful! If you use either function too many times in your code, your code could slow to a crawl.
 
 # Reach
 
