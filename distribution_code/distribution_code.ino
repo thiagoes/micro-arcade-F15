@@ -53,7 +53,7 @@ const Color YELLOW(7, 7, 0);
 const Color GREEN(0, 7, 0);
 const Color BLUE(0, 0, 7);
 const Color PURPLE(7, 0, 7);
-const Color WHITE(7, 0, 7);
+const Color WHITE(7, 7, 7);
 const Color LIME(4, 7, 0);
 const Color AQUA(0, 7, 7);
 
