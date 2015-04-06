@@ -224,9 +224,6 @@ class Game {
     // Modifies: global variable matrix
     // see http://arduino.cc/en/Reference/Setup
     void setup() {
-      Serial.begin(9600);
-      pinMode(BUTTON_PIN_NUMBER, INPUT);
-      matrix.begin();
     }
     
     // displays and runs Space Invaders!
@@ -246,7 +243,7 @@ class Game {
     bool level_cleared() {
     }
 
-    // if Player dies, need to play the current level again.
+    // set up a level
     void reset_level() {
     }
 };
@@ -256,13 +253,16 @@ Game game;
 
 // see http://arduino.cc/en/Reference/Setup
 void setup() {
+  Serial.begin(9600);
+  pinMode(BUTTON_PIN_NUMBER, INPUT);
+  matrix.begin();
 }
 
 // see http://arduino.cc/en/Reference/Loop
 void loop() {
   int potentiometer_value = analogRead(POTENTIOMETER_PIN_NUMBER);
-  bool button_pressed = (digitalRead(BUTTON_PIN_NUMBER));
-  
+  bool button_pressed = (digitalRead(BUTTON_PIN_NUMBER) == HIGH);
+
   game.loop(potentiometer_value, button_pressed);
 }
 
