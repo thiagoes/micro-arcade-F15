@@ -210,7 +210,7 @@ Attach the potentiometer onto a column on the breadboard so that all the legs ar
 
 ![How to connect the potentiometer to the Arduino and to the breadboard](readme_files/potentiometer-breadboard.jpg)
 
-For the button, you want to position it on your breadboard so that the legs on opposite sides of the button spans a ditch (as shown in the digram). One leg should be wired to power; the other leg should be connected to the resistor and digital pin 10. The resistor should be connected to ground. This image shows the correct wiring for a button connected to digital pin 2 (instead of pin 10).
+For the button, you want to position it on your breadboard so that the legs on opposite sides of the button spans a ditch (as shown in the digram). One leg should be wired to power; the other leg should be connected to the resistor(in the range of 1 kohm to 10 kohm) and digital pin 10. The resistor should be connected to ground. This image shows the correct wiring for a button connected to digital pin 2 (instead of pin 10).
 
 ![How to connect the button to the Arduino and to the breadboard](readme_files/button-breadboard.png)
 
@@ -242,7 +242,7 @@ For the button, you want to position it on your breadboard so that the legs on o
 
 5. Just one more thing before we begin wiring. By convention, different colored wires are used for different things, so that it's easier to separate them. The most common convention is to use red wires for power, and black wires for ground. In this project, we will also be using wires that represent the red, green, and blue values of LEDs. If you don't have wires of these colors, don't worry - you can still do the project, you'll just have to keep track of the different wires more carefully.
 
-5. Now we're reading to start wiring. First, four of the input connector pins should be grounded (eg. connected to ground). Since we only have three ground pins on the Arduino, we will need to use the breadboard. Take a wire - preferably black - and gently insert it into one of the ground pins on the Arduino. Take the other end and insert it into a hole on the breadboard next to one of the blue lines.
+5. Now we're reading to start wiring. First, four of the input connector pins should be grounded (i.e., connected to ground). Since we only have three ground pins on the Arduino, we will need to use the breadboard. Take a wire - preferably black - and gently insert it into one of the ground pins on the Arduino. Take the other end and insert it into a hole on the breadboard next to one of the blue lines.
 
 7. All the GND pins on the cable should be wired to other holes next to the same blue line. This connects those pins to the breadboard, which connects to ground on the Arduino.
 
@@ -379,7 +379,7 @@ From the basic use of the Arduino microcontroller, there are many extensions for
 
 ## Step 1 of 2
 
-Submit your proposals in PDF format by **Fri 3/27** to [the autograder](https://umich.edu/~eecs183/autograder) under the appropriate Proposal submission section. Please include the names of all your team members in your Proposal document. Your submission should be titled 
+Submit your proposals in PDF format by **Fri 11/20** to [the autograder](https://umich.edu/~eecs183/autograder) under the appropriate Proposal submission section. Please include the names of all your team members in your Proposal document. Your submission should be titled 
 
         arduino_uniqname1_uniqname2_uniqname3_uniqname4.pdf
 
@@ -400,7 +400,7 @@ As well as these warm-up questions about the project:
 
 ## Step 2 of 2
 
-Head to https://umich.edu/~eecs183/forms/final_project where a form awaits. Fill it out by **Fri 3/27**. Once **each member of your team** has submitted that form (and your team has submitted the PDF in Step 1), you are done with the Proposal! We advise you submit these while meeting with your teammates, if possible, to minimize the chances of misspelling any uniqnames or your team name.
+Head to https://umich.edu/~eecs183/forms/final_project where a form awaits. Fill it out by **Fri 11/20**. Once **each member of your team** has submitted that form (and your team has submitted the PDF in Step 1), you are done with the Proposal! We advise you submit these while meeting with your teammates, if possible, to minimize the chances of misspelling any uniqnames or your team name.
 
 # Submission
 
