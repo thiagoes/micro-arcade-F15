@@ -379,11 +379,11 @@ From the basic use of the Arduino microcontroller, there are many extensions for
 
 ## Step 1 of 2
 
-Submit your proposals in PDF format by **Fri 11/20** to [the autograder](https://umich.edu/~eecs183/autograder) under the appropriate Proposal submission section. Please include the names of all your team members in your Proposal document. Your submission should be titled 
-
-        arduino_uniqname1_uniqname2_uniqname3_uniqname4.pdf
-
 The team that you submit your proposal with constitutes your team for the Final Project. There will be no revisions to these teams except in situations which merit staff intervention. You may not change your team once this document has been submitted.
+
+Create a PDF file called proposal.pdf. Include the following:
+* The name of your team.
+* Name, uniqname, and GitHub username for each team member.
 
 Your proposal **must** also answer the following questions about your team:
 
@@ -400,9 +400,14 @@ As well as these warm-up questions about the project:
 
 ## Step 2 of 2
 
-Head to https://umich.edu/~eecs183/forms/final_project where a form awaits. Fill it out by **Fri 11/20**. Once **each member of your team** has submitted that form (and your team has submitted the PDF in Step 1), you are done with the Proposal! We advise you submit these while meeting with your teammates, if possible, to minimize the chances of misspelling any uniqnames or your team name.
+Submit your proposals in PDF format by **Fri 11/20** to [EECS 183 on Gradescope](https://gradescope.com/courses/609).
 
-# Submission
+* Head to [EECS 183 on Gradescope](https://gradescope.com/courses/609). Then choose Proposal: Arduino from the assignments list. Select Submit PDF and upload your proposal.pdf.
+* Once the PDF file has been uploaded, select pages corresponding to each part (i.e., question) of the proposal assignment. Click Save.
+* Click on Add Group Member on the top right. Add the three other members of your team by typing their names or email addresses. Once everyone on your team is in the list, click Save. Everyone who has been added to the group on Gradescope will receive an email and will be able to access the submission, including the score and staff's comments after the proposal has been graded.
+
+
+# Project Submission
 
 Submissions will occur via your team GitHub repository. You will create a sketch file starting from the distribution code. Your entire implementation will be in this one file. We will retrieve your file from your group repository on the due date.
 
