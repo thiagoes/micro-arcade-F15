@@ -34,7 +34,9 @@ Here's a picture of what your final product might look like:
 * [Proposal](#proposal)
 * [Submission](#submission)
 * [Troubleshooting](#troubleshooting)
+* [Support Staff](#support-staff)
 * [References](#references)
+
 
 # Core
 
@@ -415,6 +417,17 @@ Submissions will occur via your team GitHub repository. You will create a sketch
 # Troubleshooting
 
 If the Arduino IDE refuses to run on a Mac, even after you have installed a newer version of Java, you may need to download the experimental version. Go back to [the Arduino website](http://arduino.cc/en/Main/Software), download the experimental version (the one marked "for Java 7+"), and try again. If this still doesn't work, come talk to one of us.
+
+# Support Staff
+
+The Arduino Micro Arcade staff team has the following primary staff members.
+
+* Anna Rode
+* Anna Wasewicz
+* Bill Arthur
+* Diana Slaba
+* Helen Hagos
+* Matt Hicks
 
 # References
 
