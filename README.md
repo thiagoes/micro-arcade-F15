@@ -420,7 +420,7 @@ If the Arduino IDE refuses to run on a Mac, even after you have installed a newe
 
 # Support Staff
 
-The Arduino Micro Arcade staff team has the following primary staff members.
+The Arduino Micro Arcade staff team has the following staff members.
 
 * Anna Rode
 * Anna Wasewicz
