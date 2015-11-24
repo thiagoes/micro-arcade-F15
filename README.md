@@ -2,7 +2,7 @@
 
 This project involves using the Arduino micro-controller link two sensors to an LED screen, so that you can play [Space Invaders](http://en.wikipedia.org/wiki/Space_Invaders). The goal of this project is for you to:
 
-* Gain experience working with hardware, including circuits and a little bit of soldering (yes, there will be soldering!)
+* Gain experience working with hardware, including circuits and a little bit of soldering (soldering is not required for the core, but you may need to solder for your reach depending on the hardware you add).
 * Understand the basics of how software can control hardware, both input (a potentiometer and a button) and output (an LED screen)
 * Solidify the concepts you've learned in EECS 183, including functions, branches, loops, arrays, and classes
 * Use these concepts in a comprehensive project
