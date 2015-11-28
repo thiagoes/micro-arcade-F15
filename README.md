@@ -305,7 +305,7 @@ For the button, you want to position it on your breadboard so that the legs on o
 
     ![Adding the Adafruit GFX library](readme_files/adafruit-library.png)
 
-8. Repeat steps 4 and 5 with the RGB Matrix Panel library (the rgb-master-panel directory in your Git directory)
+8. Repeat steps 6 and 7 with the RGB Matrix Panel library (the rgb-master-panel directory in your Git directory)
 
     ![Adding the RGB Matrix Panel library](readme_files/matrix-panel-library.png)
 
