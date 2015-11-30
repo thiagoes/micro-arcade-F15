@@ -124,36 +124,60 @@ class Cannonball {
     
     // resets private data members to initial values
     void reset() {
+      x = 0;
+      y = 0;
+      fired = false;
     }
     
     // getters
     int get_x() const {
+      return x;
     }
     int get_y() const {
+      return y;
     }
     bool has_been_fired() const {
+      return fired;
     }
     
     // sets private data members
     void fire(int x_arg, int y_arg) {
+      x = x_arg;
+      y = y_arg;
     }
     
     // moves the Cannonball and detects if it goes off the screen
     // Modifies: y, fired
     void move() {
+      if (fired == true && y < 16) { // 16 is the vertical limit of the board
+        for (int i = 0; i < 16; i++) {
+          y += 1;
+        }
+      }
     }
     
     // resets private data members to initial values
     void hit() {
+      reset();
     }
     
     // draws the Cannonball, if it is fired
     void draw() {
+      if (fired == true) {
+        matrix[x][y] = ORANGE;  // fix matrix layout
+        if (y < 15) {
+        matrix[x][y + 1] = ORANGE;
+      }
     }
     
     // draws black where the Cannonball used to be
     void erase() {
+      matrix[x][y] = BLACK; // fix matrix layout
+      if (y < 15) {
+      matrix[x][y + 1] = BLACK;
+      }
     }
+    
 
   private:
     int x;
